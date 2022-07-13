@@ -3,12 +3,11 @@ package com.sirius.test_app
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.net.Uri
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
+import androidx.annotation.RequiresApi
 import androidx.appcompat.app.AppCompatActivity
 import androidx.constraintlayout.widget.ConstraintLayout
 import java.io.IOException
@@ -18,13 +17,15 @@ import java.net.URL
 
 
 class MainActivity : AppCompatActivity() {
+    @RequiresApi(Build.VERSION_CODES.M)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val dotaLogo : ImageView = findViewById(R.id.logoImageView)
-        val mainConstLayout = findViewById<ConstraintLayout>(R.id.mainContraintLayout)
-        mainConstLayout.bringChildToFront(dotaLogo)
+        val scrollView : ScrollView = findViewById(R.id.scrollView)
+        scrollView.setOnScrollChangeListener { view, x, y, oldx, oldy ->  dotaLogo.scrollTo(x,y)  }
+
 
         val installButton = findViewById<Button>(R.id.installButton)
         installButton.text.asIterable().forEach(){

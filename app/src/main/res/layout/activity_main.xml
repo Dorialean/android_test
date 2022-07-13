@@ -40,6 +40,7 @@
         tools:ignore="SpeakableTextPresentCheck" />
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="-35dp"
@@ -57,15 +58,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:visibility="visible">
-
-            <ImageView
-                android:id="@+id/logoImageView"
-                android:layout_width="197dp"
-                android:layout_height="225dp"
-                android:layout_marginTop="-80dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/logo" />
 
             <TextView
                 android:id="@+id/amountOfDownloadTextView"
@@ -416,7 +408,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="12dp"
-                android:text="Jang Marcelino"
+                android:text="Auguste Conte"
                 android:textColor=" #FFFFFF "
                 android:textSize="16sp"
                 app:layout_constraintStart_toEndOf="@+id/user2CircleImage"
@@ -441,6 +433,17 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
+
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="197dp"
+        android:layout_height="225dp"
+        android:layout_marginTop="240dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/topImageView"
+        app:srcCompat="@drawable/logo" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
