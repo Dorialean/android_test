@@ -50,7 +50,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/topImageView"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintVertical_bias="0.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/mainScrollView"
@@ -335,17 +335,17 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/border" />
 
-            <TextView
-                android:id="@+id/user1NickTextView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="18dp"
-                android:text="Auguste Conte"
-                android:textColor=" #FFFFFF "
-                android:textSize="16sp"
-                app:layout_constraintStart_toEndOf="@+id/user1CircleImage"
-                app:layout_constraintTop_toBottomOf="@+id/border" />
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/user2CircleImage"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:src="@drawable/user2"
+                app:civ_border_color="#FF000000"
+                app:civ_border_width="2dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user1ReviewTextView" />
 
             <TextView
                 android:id="@+id/publishDateTextView"
@@ -357,6 +357,17 @@
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/user1CircleImage"
                 app:layout_constraintTop_toBottomOf="@+id/user1NickTextView" />
+
+            <TextView
+                android:id="@+id/publishDateTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:text="February 14, 2019"
+                android:textColor="#66FFFFFF"
+                android:textSize="12sp"
+                app:layout_constraintStart_toEndOf="@+id/user2CircleImage"
+                app:layout_constraintTop_toBottomOf="@+id/user1NickTextView2" />
 
             <TextView
                 android:id="@+id/user1ReviewTextView"
@@ -371,6 +382,62 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/publishDateTextView" />
+
+            <TextView
+                android:id="@+id/user1ReviewTextView2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:text="“Once you start to learn its secrets, there’s a wild and exciting variety of play here that’s unmatched, even by its peers.”"
+                android:textColor="#B3EEF2FB"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/publishDateTextView2" />
+
+            <TextView
+                android:id="@+id/user1NickTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="18dp"
+                android:text="Auguste Conte"
+                android:textColor=" #FFFFFF "
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/user1CircleImage"
+                app:layout_constraintTop_toBottomOf="@+id/border" />
+
+            <TextView
+                android:id="@+id/user1NickTextView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="Jang Marcelino"
+                android:textColor=" #FFFFFF "
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/user2CircleImage"
+                app:layout_constraintTop_toBottomOf="@+id/user1ReviewTextView" />
+
+            <Button
+                android:id="@+id/installButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginBottom="36dp"
+                android:backgroundTint="#F4D144"
+                android:text="Install"
+                android:textColor="#050B18"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/user1ReviewTextView2"
+                tools:text="Install" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>
