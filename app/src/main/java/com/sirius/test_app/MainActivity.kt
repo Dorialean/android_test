@@ -9,6 +9,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import androidx.constraintlayout.widget.ConstraintLayout
 import java.io.IOException
 import java.io.InputStream
 import java.net.HttpURLConnection
@@ -19,6 +20,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val dotaLogo : ImageView = findViewById(R.id.logoImageView)
+        val mainConstLayout = findViewById<ConstraintLayout>(R.id.mainContraintLayout)
+        mainConstLayout.bringChildToFront(dotaLogo)
     }
 
     //Если бы хотел грузить картинки через DataModel, то сделал бы это так:
