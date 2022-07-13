@@ -61,22 +61,22 @@
                 android:id="@+id/amountOfDownloadTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="60dp"
+                android:layout_marginTop="50dp"
                 android:text="70M"
                 android:textColor="#45454D"
                 android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.15"
+                app:layout_constraintHorizontal_bias="0.05"
                 app:layout_constraintStart_toEndOf="@+id/starsHorizontalLayout"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:id="@+id/starsHorizontalLayout"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_width="72dp"
+                android:layout_height="12sp"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintHorizontal_bias="0.48"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/logoNameTextView">
 
@@ -125,39 +125,68 @@
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.44"
+                app:layout_constraintHorizontal_bias="0.47"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Button
-                android:id="@+id/installButton"
-                android:layout_width="match_parent"
+            <TextView
+                android:id="@+id/infoTextView"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Install"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="29dp"
+                android:layout_marginEnd="24dp"
+                android:text='Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the \"Ancient\", whilst defending their own.'
+                android:textAlignment="viewStart"
+                android:textColor="#EEFCFFE9"
+                android:textSize="12sp"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/logoNameTextView" />
+                app:layout_constraintTop_toBottomOf="@+id/tagsLinearLayout"
+                tools:text='Dota 2 is a multiplayer online battle arena (MOBA) game which has two teams of five players compete to collectively destroy a large structure defended by the opposing team known as the \"Ancient\", whilst defending their own.'
+                tools:visibility="visible" />
 
-            <ImageView
-                android:id="@+id/imageView14"
+            <TextView
+                android:id="@+id/reviewTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:text="Review &amp; Ratings"
+                android:textColor="#EEF2FB"
+                android:textSize="16sp"
+                android:visibility="visible"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/installButton"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toBottomOf="@+id/infoTextView"
+                tools:text="Review &amp; Ratings"
+                tools:visibility="visible" />
+
+            <TextView
+                android:id="@+id/ratingNumberTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="12dp"
+                android:text="4.9"
+                android:textColor=" #FFFFFF"
+                android:textSize="48sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/reviewTextView" />
 
             <LinearLayout
                 android:id="@+id/tagsLinearLayout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="24dp"
-                android:layout_marginTop="15dp"
-                android:showDividers="middle"
+                android:layout_marginTop="36dp"
                 android:divider="@drawable/empty_tall_divider"
                 android:orientation="horizontal"
+                android:showDividers="middle"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/starsHorizontalLayout">
 
